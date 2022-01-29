@@ -47,58 +47,38 @@ First and the Foremost thing I did was verification of appropriate features with
 
 After, the data cleaning and verification process in Microsoft excel. The data was exported to MySql Workbench where further analysis process is done. Here, Some New features are added for analysis purpose.
 * A New Feature "Age" was extracted from "Year_Birth" which shows the age of the customers today i.e in year 2022.Then, "Year_birth" was dropped.
-* “Children” feature is created by adding the “Kidhome” and “Teenhome ” features.
-*	Feature “Total_spent” is create which displays a customers total spendings over the span of two years.
-*	The feature "Marital_Status" has 8 different values out of which “YOLO”,” widow”, “Absurd”, “Single”, “Divorced”, “Alone” can be represented by one aggregated value i.e., “Single”, And “Together” and “Married” can also be shown as one variable i.e “Married”. Now, Single and Married are the only two values which Represents customer's Marital Status. 
+* “Kids” feature is created by adding the “Kidhome” and “Teenhome ” features.
+*	Feature “Total_spent” is created using "MntWines", "MntFruits", "MntMeatProducts", "MntFishProducts", "MntSweetProducts" and "MntGoldProds", which displays a customers total spendings over the span of two years.
+*	The feature "Marital_Status" has 8 different values out of which “YOLO”,” widow”, “Absurd”, “Single”, “Divorced”, “Alone” can be represented by one aggregated value i.e., “Single”, And “Together” and “Married” can also be shown as one variable i.e “Married”. Now, Single and Married are the only two values to which customer's Marital Status is reduced. 
 *	It is also observed that feature "Z_costContact" and "Z_revenue" repeats the same values in all the rows respectively. This feature does not seem to be contributing much to our analysis so would be better to remove them to reduced redundancy.
-*	the feature "Dt_Customer" was also dropped along with "Year_birth".
-*	In the Education feature there are 5 types of status mentioned "Basic", "2n Cycle", "Graduate", "Master" and "PhD", but the “ 2n cycle” education statues can be considered same as the “ Graduate" status so it will be replaced to “Graduate” status. Same goes for "Masters" and "PhD", Both comes under "PostGraduate" Status and similarly "Basic" represnts "UnderGraduate" status so it is changed to it. So the only educational status remaind are "UNderGraduate","Graducate" and "PostGraduate".
-*	
-
-
-
-
-•	In age feature there were few cutomers whos age seemed to be unrealtisc for being a customer so those records have been removed as they can be considered as outliers.
-
-Transform the data so you can work with it effectively
-Data has already been transformed from into excel file to perform basic data related operations.
-
-
-
-
-
-
-
-
-### Check the data for errors
-All the data cleaning and verifications in performed on a copy of original dataset for safety purposes.
-Files is imported in Microst excel for basic data correction and verification purposes.
-
-### Document the cleaning process.
-A changelog is created where a list of all the modifications made to the data is maintained.
-In the initial 
-
+*	The feature "Dt_Customer" was also dropped along with "Year_birth".
+*	In the Education feature there are 5 types of status mentioned "Basic", "2n Cycle", "Graduate", "Master" and "PhD", but the “ 2n cycle” education status can be considered same as the “ Graduate" status so it will be replaced to “Graduate” status. Same goes for "Masters" and "PhD", Both comes under "PostGraduate" Status and similarly "Basic" represents "UnderGraduate" status so it is changed to it. So the only educational status remained are "UnderGraduate","Graduate" and "PostGraduate".
+*	"TotalAcceptedCmp", a new feature is created by adding "AcceptedCmp1", "AcceptedCmp2", "AcceptedCmp3", "AcceptedCmp4" and "AcceptedCmp5".
+* "NumWebPurchases", "NumStorepurchases" and "NumCatalogPurchases" were added to create a new feature "Frequency" which displays how frequent customers has gone for shopping in two years.
+*	All the Product features were renamed.
+*	Lastly, after creating new features and dropping old ones, total number of features are 23.
 
 ## Analyze
 
-How should you organize your data to perform analysis on it?
-	Firstly, a copy of original files is made and all the data manipulations, analysis and exploration is done on it for safety purpose.
-	Check if all the varibles has appropriate data types, spellings, etc.
-	Filtering and sorting will organize data in a way that it is easier to understand, analyze and visualize
-Has your data been properly formatted?
-	The data has been formatted using sorting and filtering to keep it organized to work with it.
-What surprises did you discover in the data?
-	When the dataset is imported in Microsoft excel, couple of things is noticed.
-	First and the foremost thigs is that some of the values in income variable.
-	In addition, Dt_customer, a variable which represents the date on which a customer joined the database is not parsed as DateTime datatype.
-	Furthermore, there are some categorical features present in data, which will be needed to convert into numeric datatype for further analysis.
-What trends or relationships did you find in the data?
-	
-How will these insights help answer your business questions?
-	The insights obtained here gives us an idea that we are using the right data to perform our analysis which will help stakeholder take informed decisions.
-Share
+After performing data manipulation, it was manually made sure that the data is clean and verified. Now, after completing the data processing steps, the data was exported to tableau public, a free platform where analyst can create, explore and share data visualization online. Tableu does have great many features for creating high quality data visualization which can help in analyzing trends and patterns in data.
 
-Were you able to answer the business question?
-	By using the right approach of data cleaning, verification, manipulation, exploration and analysis it is safe to say that our results surely answers our business questions.
-What story does your data tell?
-	
+•	In age feature there were few cutomers whos age seemed to be unrealtisc for being a customer so those records have been removed as they can be considered as outliers.
+
+ ### What surprises did you discover in the data?
+ ![image](url here)
+ when data is uploaded in tableau, i created several graphs for exploration and analysis purpose. I found that majority of the customers are Graduates and least of the customers are UnderGraduates.
+ 
+ ![image](url here)
+ 
+ I also found that around three fourth of the customers are married while one one thirt of them are single.
+ 
+ ![image](url here)
+ 
+ I plotted bar char of number of customers ID vs. Total Spent in which i was discovered that, customers ID in range of 4k to 7k does seems to spend more money than others.
+
+ ![image](url here)
+
+similarly when bar char is plotted of number of customer ID against Frequency, the reuslts i got displayed that customer ID in range of 3k to 8k does shopping more frequently than others.
+
+ ![image](url here)
+
