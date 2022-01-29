@@ -64,7 +64,7 @@ After performing data manipulation, it was manually made sure that the data is c
 
 •	In age feature there were few cutomers whos age seemed to be unrealtisc for being a customer so those records have been removed as they can be considered as outliers.
 
- ### What surprises did you discover in the data?
+ ### What trends or relationships did you find in the data?
  ![image](url here)
  when data is uploaded in tableau, i created several graphs for exploration and analysis purpose. I found that majority of the customers are Graduates and least of the customers are UnderGraduates.
  
@@ -82,3 +82,28 @@ similarly when bar char is plotted of number of customer ID against Frequency, t
 
  ![image](url here)
 
+
+###  How will these insights help answer your business questions?
+
+
+After looking for trends and patterns from data visualization in tableau. for further analysis, I used the data in Rstudio. Rstudio is an IDE(Itegrated Development Environment) for R, a programming language used for statistical analysis, data analysis and data visualization. R language is open source, data centric and easily the most preffered language for processing lots of data and manipulating information for analysis.
+
+Now, I already have a general idea about customers personality but to determine which type of customers group they belong can only found using three variables.
+* Recency: shows number of days since the customers last purchase.
+* Frequency: displays how frequent the customers goes out for shopping.
+* Total Spent: it shows the total expense of each customer over the span of last years.
+
+these three features plays a major roles in determining the group in which a customer belongs. Therefore, I extracted these features and formed a new dataframe. To determine the number of clusters of customers peresnt in data i used the "Elbow Method". To use this method a new package needs to be installed called "factoextra". On executing the function for finding the number of "K" for Kmeans, The graph obtained is shwon below.
+
+
+as it be observed in this particular graph that the value "3" seems to be the elbow of the line chart. Therefore, the values selkected for K is 3. Now, when the dataframe "RFT"
+which has data regading the three features "Recency","Frequency" and "Total Spent", and the value obtained from "Elbow Method" is passed as agruemnts to Kmeans function, Three cuslters of custmers are found as shown in the figure.
+
+
+
+based on this it can be said that all the customers are divided into three groups.
+#### High Value Customers:
+* Number of users: 910
+* Avegrage days of Inactivity: 49
+* Average Number of purchases : 20
+* 
