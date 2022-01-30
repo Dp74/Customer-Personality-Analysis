@@ -41,7 +41,7 @@ Tableau is used for creating high quality data visualization while Rstudio is us
 
 ### What steps have you taken to ensure that your data is clean?
 
-![image](enter url here)  
+<img width="1264" alt="CPA_MsExcel_step_1" src="https://user-images.githubusercontent.com/30661622/151690886-4ba0f9a4-8c0a-4021-8bd5-3d020d3afda2.png">
 
 First and the Foremost thing I did was verification of appropriate features with appropriate datatype so no datatypes related issues occur. Then, I used sort and filter features of excel an was looking for any missing or incomplete values. Turns out, the feature “ Income “ has some of the fields empty. As it is an important feature of our analysis it cannot be blank. Therefore, I remove the records where the income filed was empty. So, the total rows remained were 2116.
 
@@ -69,24 +69,24 @@ After performing data manipulation, it was manually made sure that the data is c
  when the data is uploaded in tableau, I created several graphs for exploration and analysis purpose. The Findings are as follows:
  
 ![Education status of all the customers](https://user-images.githubusercontent.com/30661622/151690619-a21887b0-ea7f-41b0-b651-3358ab02364b.png)
-I found that majority of the customers are Graduates and least of the customers
+* I found that majority of the customers are Graduates and least of the customers
 are UnderGraduates.
  
 ![Marital Status of all the customers](https://user-images.githubusercontent.com/30661622/151690703-e7f5bd45-eb8c-4669-91d5-2e55d3c4f912.png)
  
-I also found that around three fourth of the customers are married while one one thirt of them are single.
+* I also found that around three fourth of the customers are married while one one thirt of them are single.
  
 ![Kids and Marital Status (1)](https://user-images.githubusercontent.com/30661622/151690773-306588c9-0aab-40c9-bcf6-b710c394b949.png)
  
-From this particular chart it can be said that most of the customers are married and has a single kid while least of the customers are Single with three kids. This seems to be one of the most interesting informattion by far.
+* From this particular chart it can be said that most of the customers are married and has a single kid while least of the customers are Single with three kids. This seems to be one of the most interesting informattion by far.
 
 ![Income and gold](https://user-images.githubusercontent.com/30661622/151690834-8d8dc27c-b8f7-4849-9fdb-1d425fcc86da.png)
 
-Plotting bar chart of Income vs GoldProducts it can be observed that cusotmers with salaries between 0k to 7k buys most gold products. whereas, customer whose salary comes under the range of 16k to 100k spends just under $250.
+* Plotting bar chart of Income vs GoldProducts it can be observed that cusotmers with salaries between 0k to 7k buys most gold products. whereas, customer whose salary comes under the range of 16k to 100k spends just under $250.
 
  ![Kids and Sweet Products](https://user-images.githubusercontent.com/30661622/151690840-564ac52b-1d08-48a1-b386-20a97f836d50.png)
 
-one other interesting insight that was found was customer with no children seems to spent more on Sweet products. From the plot it can be observed that thee more then children the less amount is spent on sweet products. 
+* One other interesting insight that was found was customer with no children seems to spent more on Sweet products. From the plot it can be observed that thee more then children the less amount is spent on sweet products. 
 
 
 After looking for trends and patterns from data visualization in tableau. for further analysis, I used the data in Rstudio. Rstudio is an IDE(Itegrated Development Environment) for R, a programming language used for statistical analysis, data analysis and data visualization. R language is open source, data centric and easily the most preffered language for processing lots of data and manipulating information for analysis.
@@ -96,14 +96,25 @@ Now, I already have a general idea about customers personality but to determine 
 * Frequency: displays how frequent the customers goes out for shopping.
 * Total Spent: it shows the total expense of each customer over the span of last years.
 
+![Rplot](https://user-images.githubusercontent.com/30661622/151691067-b01b8461-b07b-47ef-a4df-217524681bd0.jpeg)
+![Rplot01](https://user-images.githubusercontent.com/30661622/151691083-54578e0d-82d2-4482-aef5-d28ce3da7508.jpeg)
+![Rplot02](https://user-images.githubusercontent.com/30661622/151691089-fd003075-cccd-4091-b0da-a8838e17c319.jpeg)
+
+For analysis purpose I plotted the graphs of Recency, Frequency and Total Spent as shown above. IT can be observed that Recency peaks around 50 which means customers shops when the days of inactivity is around 50. The Frequency bar chart states that maximum customers shops less than 10 times in two years while less customers seems to shop more than that.At Last, 0$ to $500 is the range in which most of the customers are comfortable in shopping.   
+
 These three features plays a major roles in determining the group in which a customer belongs because they can help us understand how customers shops, how often he/she shops and what amount he/she spents when shopping.Now, I extracted these features and formed a new dataframe called "RFT". To determine the number of clusters of customers present in data I used the "Elbow Method". The elbow method is a heuristic used in Searching the number of clusters present in a data set. On executing the function for finding the number of "K" for Kmeans, The graph obtained is shwon below.
 
+![Rplot03](https://user-images.githubusercontent.com/30661622/151692016-78d48dec-93c6-4104-8647-a0f1a7313230.jpeg)
 
 As it be observed in this particular graph that the value "3" seems to be the elbow of the line chart. Therefore, the value considered for K is 3. Now, when the dataframe "RFT" and the value obtained from "Elbow Method" is passed as agruemnts to Kmeans function, Three clusters of customers are found as shown in the figure.
+
+![Rplot05](https://user-images.githubusercontent.com/30661622/151692641-fec7b548-a0ec-4817-bf7c-3966fb4c9ff0.jpeg)
 
 ## SHARE
 
 ## What story does your data tell?
+![Rplot06](https://user-images.githubusercontent.com/30661622/151692652-445ec334-1c8a-4681-9784-18ec91c5db9f.jpeg)
+![Rplot04](https://user-images.githubusercontent.com/30661622/151692612-4d90f7a4-b32b-40f1-adf7-abb40a4dfb50.jpeg)
 
 Based on the data it can be said that all the customers are divided into three groups.
 #### Highly Active Customers:
