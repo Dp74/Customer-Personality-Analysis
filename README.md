@@ -66,22 +66,25 @@ After performing data manipulation, it was manually made sure that the data is c
 
  ### What trends or relationships did you find in the data?
  
- ![image](url here)
- when data is uploaded in tableau, i created several graphs for exploration and analysis purpose. I found that majority of the customers are Graduates and least of the customers are UnderGraduates.
+ when the data is uploaded in tableau, I created several graphs for exploration and analysis purpose. The Findings are as follows:
  
- ![image](url here)
+![Education status of all the customers](https://user-images.githubusercontent.com/30661622/151690619-a21887b0-ea7f-41b0-b651-3358ab02364b.png)
+I found that majority of the customers are Graduates and least of the customers
+are UnderGraduates.
  
- I also found that around three fourth of the customers are married while one one thirt of them are single.
+![Marital Status of all the customers](https://user-images.githubusercontent.com/30661622/151690703-e7f5bd45-eb8c-4669-91d5-2e55d3c4f912.png)
  
- ![image](url here)
+I also found that around three fourth of the customers are married while one one thirt of them are single.
+ 
+![Kids and Marital Status (1)](https://user-images.githubusercontent.com/30661622/151690773-306588c9-0aab-40c9-bcf6-b710c394b949.png)
  
 From this particular chart it can be said that most of the customers are married and has a single kid while least of the customers are Single with three kids. This seems to be one of the most interesting informattion by far.
 
- ![image](url here)
+![Income and gold](https://user-images.githubusercontent.com/30661622/151690834-8d8dc27c-b8f7-4849-9fdb-1d425fcc86da.png)
 
 Plotting bar chart of Income vs GoldProducts it can be observed that cusotmers with salaries between 0k to 7k buys most gold products. whereas, customer whose salary comes under the range of 16k to 100k spends just under $250.
 
- ![image](url here)
+ ![Kids and Sweet Products](https://user-images.githubusercontent.com/30661622/151690840-564ac52b-1d08-48a1-b386-20a97f836d50.png)
 
 one other interesting insight that was found was customer with no children seems to spent more on Sweet products. From the plot it can be observed that thee more then children the less amount is spent on sweet products. 
 
