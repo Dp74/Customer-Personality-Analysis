@@ -65,6 +65,7 @@ After performing data manipulation, it was manually made sure that the data is c
 •	In age feature there were few cutomers whos age seemed to be unrealtisc for being a customer so those records have been removed as they can be considered as outliers.
 
  ### What trends or relationships did you find in the data?
+ 
  ![image](url here)
  when data is uploaded in tableau, i created several graphs for exploration and analysis purpose. I found that majority of the customers are Graduates and least of the customers are UnderGraduates.
  
@@ -74,36 +75,61 @@ After performing data manipulation, it was manually made sure that the data is c
  
  ![image](url here)
  
- I plotted bar char of number of customers ID vs. Total Spent in which i was discovered that, customers ID in range of 4k to 7k does seems to spend more money than others.
+From this particular chart it can be said that most of the customers are married and has a single kid while least of the customers are Single with three kids. This seems to be one of the most interesting informattion by far.
 
  ![image](url here)
 
-similarly when bar char is plotted of number of customer ID against Frequency, the reuslts i got displayed that customer ID in range of 3k to 8k does shopping more frequently than others.
+Plotting bar chart of Income vs GoldProducts it can be observed that cusotmers with salaries between 0k to 7k buys most gold products. whereas, customer whose salary comes under the range of 16k to 100k spends just under $250.
 
  ![image](url here)
 
-
-###  How will these insights help answer your business questions?
+one other interesting insight that was found was customer with no children seems to spent more on Sweet products. From the plot it can be observed that thee more then children the less amount is spent on sweet products. 
 
 
 After looking for trends and patterns from data visualization in tableau. for further analysis, I used the data in Rstudio. Rstudio is an IDE(Itegrated Development Environment) for R, a programming language used for statistical analysis, data analysis and data visualization. R language is open source, data centric and easily the most preffered language for processing lots of data and manipulating information for analysis.
 
-Now, I already have a general idea about customers personality but to determine which type of customers group they belong can only found using three variables.
+Now, I already have a general idea about customers personality but to determine the types of customer groups can be found using three variables. 
 * Recency: shows number of days since the customers last purchase.
 * Frequency: displays how frequent the customers goes out for shopping.
 * Total Spent: it shows the total expense of each customer over the span of last years.
 
-these three features plays a major roles in determining the group in which a customer belongs. Therefore, I extracted these features and formed a new dataframe. To determine the number of clusters of customers peresnt in data i used the "Elbow Method". To use this method a new package needs to be installed called "factoextra". On executing the function for finding the number of "K" for Kmeans, The graph obtained is shwon below.
+These three features plays a major roles in determining the group in which a customer belongs because they can help us understand how customers shops, how often he/she shops and what amount he/she spents when shopping.Now, I extracted these features and formed a new dataframe called "RFT". To determine the number of clusters of customers present in data I used the "Elbow Method". The elbow method is a heuristic used in Searching the number of clusters present in a data set. On executing the function for finding the number of "K" for Kmeans, The graph obtained is shwon below.
 
 
-as it be observed in this particular graph that the value "3" seems to be the elbow of the line chart. Therefore, the values selkected for K is 3. Now, when the dataframe "RFT"
-which has data regading the three features "Recency","Frequency" and "Total Spent", and the value obtained from "Elbow Method" is passed as agruemnts to Kmeans function, Three cuslters of custmers are found as shown in the figure.
+As it be observed in this particular graph that the value "3" seems to be the elbow of the line chart. Therefore, the value considered for K is 3. Now, when the dataframe "RFT" and the value obtained from "Elbow Method" is passed as agruemnts to Kmeans function, Three clusters of customers are found as shown in the figure.
 
+## SHARE
 
+## What story does your data tell?
 
-based on this it can be said that all the customers are divided into three groups.
-#### High Value Customers:
+Based on the data it can be said that all the customers are divided into three groups.
+#### Highly Active Customers:
 * Number of users: 910
-* Avegrage days of Inactivity: 49
-* Average Number of purchases : 20
-* 
+* Average days of inactivity: 49
+* Average Number of purchases in two years: 20
+* Average Total Expense of $1,266 in two years
+* Cluster Revenue Generated is : $1,115,703.
+#### Moderately Active Customers:
+* Number of Users: 659
+* Average days of inactivity in two years: 74
+* Average Number of purchases in two years: 8
+* Average Total expense in two years: $175
+* Cluster Revenue Generated : $115,505
+### Least Active Customers:
+* Number of Users: 644
+* Average days of inactivity in two years: 23
+* Average Number of purchases in two years: 8
+* Average Total expense in two years: $174
+* Cluster Revenue Generated : $115,505
+
+
+## ACT
+
+### What is your final conclusion based on your analysis?
+From my analysis it is clear that there are three types of customers which can be distinguish based on their characterstics. These customers does have unique insights as shown in dashboard above.
+
+### What next steps would you or your stakeholders take based on your findings?
+Based on these insights, following steps can be taken:
+* Based on Cluster Number, new offers, discounts and promotions can be introduced.
+* Based on customers's Marital Status, Income, Number of Children etc. products suggestion can be improved.
+* Target advertising or preferencing of products should be implied to make the most out of marketing strategies while spending less resource.
