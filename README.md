@@ -102,6 +102,8 @@ After, the data cleaning and verification process in Microsoft Excel. The data w
 
 ## ANALYZE  <a id = "Analyze"></a> 
 
+All the data visualization created in tableau can be accessed from [here]. (https://public.tableau.com/app/profile/dhyey.patel7795/viz/CustomerPersonalityAnalysisWorkbook/Sheet9) 
+
 After performing data manipulation in MySql Workbench, it was manually made sure that the data is clean and verified. Now, the data was exported to tableau public, a free platform where analyst can create, explore and share data visualization online. Tableu does have great many features for creating high quality data visualization which can help in analyzing trends and patterns in data.
 
  ### What trends or relationships did you find in the data?
