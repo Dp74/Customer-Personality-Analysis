@@ -2,14 +2,14 @@
 For the Google Data Analytics Capstone project, I have decided to work with Customer Personality Analysis case study. I will be determining various types of customers and try to understand them better, so the products offered can be modified according to their wants and needs.
 
 For this particular project I followed six steps data analysis process to which I was introduced in my Google Data Analytics Course. The six steps are:
-* ASK
-* PREPARE
-* PROCESS
-* ANALYZE
-* SHARE 
-* ACT
+* <a href = "#Ask"> ASK </a>
+* <a href = "#Prepare"> PREPARE </a>
+* <a href = "#Process"> PROCESS </a>
+* <a href = "#Analyze"> ANALYZE </a>
+* <a href = "#Share"> SHARE </a>
+* <a href = "#Act"> ACT </a>
 
-## ASK
+## ASK <a id = "Ask"></a> 
 ###  What topic are you exploring?
 Here I am exploring the Cutomer Personality Analysis dataset from Kaggle. In this dataset there are number of features and records that can be used for finding interesting patterns and insights regarding customers buying habits and characteristics. 
 ###  What is the problem you are trying to solve?
@@ -17,7 +17,7 @@ I am trying to perform Customer Segmentation in order to find trends and pattern
 ### How can your insights help your client make decisions?
 By the help of the insights found through this analysis stakeholders can understand what improvements can be done to make their business better.
 
-## Prepare
+## PREPARE <a id = "Prepare"></a> 
 
 ###  Where is your data located?
 Data has been downloaded from a credible source i.e Kaggle.<br/>
@@ -75,7 +75,7 @@ It can be understood sophisticatedly, is machine readable, does contain metadata
 ### How are you addressing licensing, privacy, security, and accessibility?
 The Dataset comes under " CC0: Pulibc Domain " license. This means an individual can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
 
-## Process
+## PROCESS  <a id = "Process"></a> 
 
 ### What tools are you choosing and why?
 Microsoft excel is used because it can be considered the best tool for handling small datasets. It is easy to use, shows you a quick glance of how data is organized and stored. It can also help you find duplicate records, perform sorting, filtering, conditional formatting etc. I have also used MySql for data manipulation and exploration such as adding and removing features, and summarizing statistics. Tableau is used for creating high quality data visualization while Rstudio is used for performing clustering, data centric cleaning, transforming and visualization using coding.
@@ -100,7 +100,7 @@ After, the data cleaning and verification process in Microsoft Excel. The data w
 *	All the Product features were renamed.
 *	Lastly, after creating new features and dropping some old ones, total number of features are 23 and records are 2213.
 
-## Analyze
+## ANALYZE  <a id = "Analyze"></a> 
 
 After performing data manipulation in MySql Workbench, it was manually made sure that the data is clean and verified. Now, the data was exported to tableau public, a free platform where analyst can create, explore and share data visualization online. Tableu does have great many features for creating high quality data visualization which can help in analyzing trends and patterns in data.
 
@@ -136,8 +136,14 @@ Now, I have a general idea about customers personality but to determine the type
 * Total Spent: shows the total expense of each customer over the span of last two years.
 
 For analysis purpose I plotted the graphs of Recency, Frequency and Total Spent as shown below.
+
+
 ![Rplot](https://user-images.githubusercontent.com/30661622/151691067-b01b8461-b07b-47ef-a4df-217524681bd0.jpeg)
+
+
 ![Rplot01](https://user-images.githubusercontent.com/30661622/151691083-54578e0d-82d2-4482-aef5-d28ce3da7508.jpeg)
+
+
 ![Rplot02](https://user-images.githubusercontent.com/30661622/151691089-fd003075-cccd-4091-b0da-a8838e17c319.jpeg)
 
 It can be observed that Recency peaks around 50 which means customers shops when the days of inactivity is around 50. The Frequency bar chart states that maximum customers shops less than 10 times in two years while less customers seems to shop more than that. From the Total Spent bar graph, 0$ to $500 is the range in which most of the customers are comfortable in shopping.   
@@ -150,14 +156,18 @@ As it be observed in this particular graph that the value "3" seems to be the el
 
 ![Rplot05](https://user-images.githubusercontent.com/30661622/151692641-fec7b548-a0ec-4817-bf7c-3966fb4c9ff0.jpeg)
 
-## SHARE
+## SHARE  <a id = "Share"></a> 
 
 ## What story does your data tell?
+Based on the data it can be said that all the customers are divided into three groups.
 
-![Rplot06](https://user-images.githubusercontent.com/30661622/151692652-445ec334-1c8a-4681-9784-18ec91c5db9f.jpeg)<br/>
+
+![Rplot06](https://user-images.githubusercontent.com/30661622/151692652-445ec334-1c8a-4681-9784-18ec91c5db9f.jpeg)
+
+
 ![Rplot04](https://user-images.githubusercontent.com/30661622/151692612-4d90f7a4-b32b-40f1-adf7-abb40a4dfb50.jpeg)
 
-Based on the data it can be said that all the customers are divided into three groups.
+
 #### Highly Active Customers:
 * Number of users: 910
 * Average days of inactivity: 49
@@ -178,7 +188,7 @@ Based on the data it can be said that all the customers are divided into three g
 * Cluster Revenue Generated : $115,505
 
 
-## ACT
+## ACT  <a id = "Act"></a> 
 
 ### What is your final conclusion based on your analysis?
 From my analysis it is clear that there are three types of customers which can be distinguish based on their characterstics. These customers does have unique insights as shown in graphs above. Based on the insights found here, stakeholders can progress in making appropriate decisions for the business.
