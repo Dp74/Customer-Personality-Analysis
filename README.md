@@ -17,14 +17,15 @@ I am trying to perform Customer Segmentation in order to find trends and pattern
 ### How can your insights help your client make decisions?
 By the help of the insights found through this analysis stakeholders can understand what improvements can be done to make their business better.
 
-## PREPARE <a id = "Prepare"></a> 
-
+## PREPARE <a id = "Prepare"></a>
 ###  Where is your data located?
 Data has been downloaded from a credible source i.e Kaggle.<br/>
 Name of the dataset is : <a href="https://www.kaggle.com/imakash3011/customer-personality-analysis"> Customer Personality Analysis </a> <br/>
 It can be considered as second party data as it has been collected by Dr. Omar Romero-Hernandez and shared by Akash Patel.<br/>
 ###  How is the data organized?
 The Dataset is in a CSV file.<br/>
+File with raw data is attached [here](CPA_rawdata.csv)
+
 
 ## Attributes
 
@@ -68,7 +69,6 @@ The Dataset is in a CSV file.<br/>
 4. NumWebVisitsMonth: Number of visits to company’s website in the last month
 <br/>
 The data contains 2214 unique records and 29 unique variables.
-
 ### Are there issues with bias or credibility in this data?
 The Dataset shows a usability of “9.7 “out of 10 on Kaggle, therefore it does have high credibility
 It can be understood sophisticatedly, is machine readable, does contain metadata and provides assurance that data is well maintained.
@@ -76,7 +76,6 @@ It can be understood sophisticatedly, is machine readable, does contain metadata
 The Dataset comes under " CC0: Pulibc Domain " license. This means an individual can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
 
 ## PROCESS  <a id = "Process"></a> 
-
 ### What tools are you choosing and why?
 Microsoft excel is used because it can be considered the best tool for handling small datasets. It is easy to use, shows you a quick glance of how data is organized and stored. It can also help you find duplicate records, perform sorting, filtering, conditional formatting etc. I have also used MySql for data manipulation and exploration such as adding and removing features, and summarizing statistics. Tableau is used for creating high quality data visualization while Rstudio is used for performing clustering, data centric cleaning, transforming and visualization using coding.
 
@@ -84,9 +83,18 @@ Microsoft excel is used because it can be considered the best tool for handling 
 
 <img width="1264" alt="CPA_MsExcel_step_1" src="https://user-images.githubusercontent.com/30661622/151690886-4ba0f9a4-8c0a-4021-8bd5-3d020d3afda2.png">
 
-First and the Foremost thing I did was conversion of .csv file to .xls file just so it can be used in Microsoft Excel. After that, I verified that all features has appropriate datatype so no datatypes related issues occur. Then, I used sort and filter features of excel to look for any missing or incomplete values. Turns out, the feature “ Income “ has some of the fields empty. As it is an important feature of our analysis it cannot be blank. Therefore, I remove the records where the income filed was empty. Now, the total rows remained were 2116.
+As I said earlier Microsoft Excel is one of the best tools for handling small datasets with considerable features. It has number of functions which can be really useful for performing quick analysis and gaining general insights. It is a spreadsheet program which is used to save, explore, manipulate and analyse data. 
+
+
+So, First and the Foremost thing I did was conversion of .csv file to .xls file just so it can be used in Microsoft Excel. After that, I verified that all features has appropriate datatype so no datatypes related issues occur. Then, I used sort and filter features of excel to look for any missing or incomplete values. Turns out, the feature “ Income “ has some of the fields empty. As it is an important feature of our analysis it cannot be blank. Therefore, I remove the records where the income filed was empty. Now, the total rows remained were 2116.
 <br/>
-After, the data cleaning and verification process in Microsoft Excel. The data was exported to MySql Workbench where further analysis is done. Here, Some new features are added for analysis purpose.
+
+
+The code for the data cleaning and data manipulation process from MYSQL WorkBench can be accessed from [here](CPA_Script.sql),
+
+
+After, the data cleaning and verification process in Microsoft Excel. The data was exported to MYSQL Workbench where further analysis is done. MySQL is a free, open source RDBMS (relational database management system) that utilizes SQL (structured query language). SQL is a language used to add, access and manage database content. The language is known for its proven reliability, quick processing, flexibility and ease of use. Now, using SQL in MYSQL WorkBench some new features are added for analysis purpose as shown below.
+
 * A New Feature "Age" was extracted from "Year_Birth" which shows the age of the customers today i.e in year 2022.
 * In "Age" feature there were few cutomers whos age seemed to be unrealtisc for being a customer so those records have been removed as they can be considered as outliers.
 * “Kids” is created by adding the “Kidhome” and “Teenhome ” features.
@@ -100,9 +108,13 @@ After, the data cleaning and verification process in Microsoft Excel. The data w
 *	All the Product features were renamed.
 *	Lastly, after creating new features and dropping some old ones, total number of features are 23 and records are 2213.
 
+
+The cleaned and verified data From MYSQL WorkBench is available [here](Cleaned_and_verified_CPAdata.csv).
+
+
 ## ANALYZE  <a id = "Analyze"></a> 
 
-All the data visualization created in tableau can be accessed from [here]. (https://public.tableau.com/app/profile/dhyey.patel7795/viz/CustomerPersonalityAnalysisWorkbook/Sheet9) 
+All the Data Visualizations created in Tableau Public can be accessed from [here](https://public.tableau.com/views/CustomerPersonalityAnalysisWorkbook/Educationstatusofallthecustomers_1?:language=en-US&:display_count=n&:origin=viz_share_link). 
 
 After performing data manipulation in MySql Workbench, it was manually made sure that the data is clean and verified. Now, the data was exported to tableau public, a free platform where analyst can create, explore and share data visualization online. Tableu does have great many features for creating high quality data visualization which can help in analyzing trends and patterns in data.
 
@@ -129,7 +141,11 @@ are UnderGraduates.
  ![Kids and Sweet Products](https://user-images.githubusercontent.com/30661622/151690840-564ac52b-1d08-48a1-b386-20a97f836d50.png)
 
 * One other interesting insight that was found was customer with no children seems to spent more on Sweet products. From the plot it can be observed that the more then children, the less amount is spent on sweet products. 
-</br>
+
+
+The code for Statistical Analysis and Data Exploration in RStudio is available [here](Data_Visualization_and_Data_Exploration_of_cpa_data.R).
+
+
 After looking for trends and patterns from data visualization in tableau. For further analysis, I used Rstudio. Rstudio is an IDE(Itegrated Development Environment) for R, a programming language used for statistical analysis, data analysis and data visualization. R language is open source, data centric and easily the most preffered language for processing lots of data and manipulating information.
 
 Now, I have a general idea about customers personality but to determine the types of customers can be done by using these three features. 
